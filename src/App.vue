@@ -1,17 +1,42 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+    <img src="./assets/logo.svg">
+    <div class="container">
+      <Tabs>
+        <tab name="Enter Code" :selected="true">
+          
+          <div class="field has-addons has-addons-centered">
+            <div class="control has-icons-right">
+              <input class="input is-large" type="text" placeholder="Enter printer code">
+              <span class="icon is-large is-right">
+                <i class="fas fa-check"></i>
+              </span>
+            </div>
+            <div class="control">
+              <a class="button is-info is-large">
+                Print
+              </a>
+            </div>  
+          </div>
+
+        </tab>
+        <tab name="Select Printer">
+          <h1>Choose a printer here</h1>
+        </tab>  
+      </Tabs>
+    </div>
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-import HelloWorld from "./components/HelloWorld.vue";
+import Tabs from "./components/Tabs.vue";
+import Tab from "./components/Tab.vue";
 
 @Component({
   components: {
-    HelloWorld
+    Tabs,
+    Tab
   }
 })
 export default class App extends Vue {}
