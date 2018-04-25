@@ -7,7 +7,7 @@
           
           <div class="field has-addons has-addons-centered">
             <div class="control has-icons-right">
-              <input class="input is-large" type="text" placeholder="Enter printer code">
+              <input class="input is-large" type="text" placeholder="Enter printer code or die">
               <span class="icon is-large is-right">
                 <i class="fas fa-check"></i>
               </span>
