@@ -8,3 +8,6 @@ phases:
 artifacts:
   files:
     - dist/*
+    - dist/css/*
+    - dist/img/*
+    - dist/js/*
