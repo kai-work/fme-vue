@@ -10,10 +10,6 @@ These instructions will get you a copy of the project up and running on your loc
 
 You need to have node.js and npm installed on your system.
 
-```
-Give examples
-```
-
 ### Installing
 
 To setup your development environment install the node dependencies:
