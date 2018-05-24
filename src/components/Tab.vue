@@ -7,9 +7,16 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
+import { inject } from "../ioc/decorators";
+import { IApiService } from "../common/i.api.service";
+import { ApiService } from "../common/api.service";
 
-@Component
+@Component({
+  providers: [ApiService]
+})
 export default class Tab extends Vue {
+  @inject(ApiService) private readonly _apiService!: IApiService;
+
   @Prop({ required: true })
   public name!: string;
   @Prop({ default: false })
@@ -17,7 +24,9 @@ export default class Tab extends Vue {
 
   isActive: boolean = false;
 
-  mounted() {
+  async mounted() {
+    console.log("TAB");
+    console.log(this._apiService.identifier);
     this.isActive = this.selected;
   }
 

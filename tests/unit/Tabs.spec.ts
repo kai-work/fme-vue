@@ -1,5 +1,8 @@
 import { shallow } from "@vue/test-utils";
 import Tabs from "@/components/Tabs.vue";
+import { IApiService } from "@/common/i.api.service";
+
+jest.mock("@/common/api.service");
 
 describe("Tabs.vue", () => {
   it("changes tab when clicked on it", () => {

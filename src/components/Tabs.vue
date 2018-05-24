@@ -18,9 +18,16 @@
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
 import Tab from "./components/Tab.vue";
+import { inject } from "../ioc/decorators";
+import { IApiService } from "../common/i.api.service";
+import { ApiService } from "../common/api.service";
 
-@Component
+@Component({
+  providers: [ApiService]
+})
 export default class Tabs extends Vue {
+  @inject(ApiService) private readonly _apiService!: IApiService;
+
   tabs = Array<any>();
 
   mounted() {
@@ -31,6 +38,12 @@ export default class Tabs extends Vue {
     for (let tab of this.tabs) {
       tab.isActive = tab.name == selectedTab.name;
     }
+  }
+
+  async listObjects() {
+    console.log(this._apiService.identifier);
+    const obs = await this._apiService.list();
+    console.log(obs);
   }
 }
 </script>

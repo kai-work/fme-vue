@@ -54,6 +54,7 @@ This will create a new "dist" folder with static assets.
 * [Vue](https://vuejs.org/v2/guide/) - The web framework used
 * [Bulma](https://bulma.io/documentation/) - The CSS framework used
 * [Typescript](https://www.typescriptlang.org/docs/home.html) - Programming language
+* [Jest](https://facebook.github.io/jest/docs/en/getting-started.html) - Testrunner
 
 ## Versioning
 
